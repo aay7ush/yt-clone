@@ -1,12 +1,17 @@
-import { Button } from '@/components/ui/button'
+import Sidebar from "../components/Sidebar";
+import Searchbar from "../components/Searchbar";
 
-export default function Home() {
-	return (
-		<>
-			<h1 className="text-3xl font-bold underline">
-				Let's build YouTube Clone
-			</h1>
-			<Button>Click Me</Button>
-		</>
-	)
-}
+const Home = () => {
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-4">
+        <Searchbar />
+        <h1 className="mt-4">Home Page</h1>
+        {/* Your main content goes here */}
+      </div>
+    </div>
+  );
+};
+
+export default Home;
