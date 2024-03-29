@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import HoverDiv from "./HoverDiv";
+import HoverDiv from "./ui/HoverDiv";
 import { sidebarData } from "./SidebarData";
 
 type Props = {};
