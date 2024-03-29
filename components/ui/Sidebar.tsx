@@ -1,12 +1,12 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import { IoIosMenu } from "react-icons/io";
-import youtubelogo from "@/app/assets/images/yt-logo.jpg";
-import HoverDiv from "./HoverDiv";
+import youtubeLogo from "@/app/assets/images/yt-logo.jpg";
 import { cn } from "@/lib/utils";
+import { AlignJustify } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
+import HoverDiv from "./HoverDiv";
 import { sidebarData } from "./SidebarData";
 
 type Props = {};
@@ -18,11 +18,11 @@ export default function Sidebar({}: Props) {
     <div className="h-full flex flex-col text-slate-50">
       <section className="flex items-center gap-4 px-5 py-5">
         <HoverDiv onClick={toggleSidebar} className="p-2 rounded-full">
-          <IoIosMenu className="text-3xl" />
+          <AlignJustify className="text-3xl" />
         </HoverDiv>
         <Image
           className="w-[90px] h-[20px]"
-          src={youtubelogo}
+          src={youtubeLogo}
           alt="youtube-logo"
         />
       </section>

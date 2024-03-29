@@ -1,61 +1,48 @@
-import { BsGrid3X3Gap } from "react-icons/bs";
-import { GoHome, GoHomeFill } from "react-icons/go";
-import { SiYoutubeshorts } from "react-icons/si";
-
-import { IoMdPerson } from "react-icons/io";
-import { RiVideoFill, RiVideoLine } from "react-icons/ri";
-import { VscHistory } from "react-icons/vsc";
 import YtShortsIcon from "@/app/assets/svg/YtShortsIcon";
-import { MdOutlineSubscriptions, MdSubscriptions } from "react-icons/md";
+import { SidebarItemProps } from "@/types";
+import {
+  History,
+  Home,
+  LayoutGrid,
+  SquarePlay,
+  SquarePlayIcon,
+  SquareUserRound,
+} from "lucide-react";
 
-type SidebarItem = {
-  title?: string;
-  path?: string;
-  defaultIcon?: React.ReactNode; // ReactNode is a type that can be anything that can be rendered in React (string, number, element, fragment, html, jsx etc)
-  activeIcon?: React.ReactNode;
-  nestedItems?: SidebarItem[]; // Nested items for dropdown menu in sidebar
-  sectionTitle?: string;
-};
-
-export const sidebarData: SidebarItem[] = [
+export const sidebarData: SidebarItemProps[] = [
   {
     title: "Home",
     path: "/",
-    defaultIcon: <GoHome />,
-    activeIcon: <GoHomeFill />,
+    defaultIcon: <Home />,
+    activeIcon: <Home />,
   },
   {
     title: "Trending",
     path: "/trending",
-    defaultIcon: <BsGrid3X3Gap />,
-    activeIcon: <BsGrid3X3Gap />,
+    defaultIcon: <LayoutGrid />,
+    activeIcon: <LayoutGrid />,
   },
   {
     title: "Shorts",
     path: "/shorts",
     defaultIcon: <YtShortsIcon />,
-    activeIcon: <SiYoutubeshorts />,
+    activeIcon: <YtShortsIcon />,
   },
-  {
-    title: "Subscriptions",
-    path: "/Subscriptions",
-    defaultIcon: <MdOutlineSubscriptions />,
-    activeIcon: <MdSubscriptions />,
-  },
+
   {
     sectionTitle: "Library",
     nestedItems: [
       {
         title: "History",
         path: "/history",
-        defaultIcon: <VscHistory />,
-        activeIcon: <RiVideoFill />,
+        defaultIcon: <History />,
+        activeIcon: <History />,
       },
       {
         title: "Your Videos",
         path: "/your-videos",
-        defaultIcon: <RiVideoLine />,
-        activeIcon: <RiVideoFill />,
+        defaultIcon: <SquarePlay />,
+        activeIcon: <SquarePlayIcon />,
       },
     ],
   },
@@ -65,8 +52,8 @@ export const sidebarData: SidebarItem[] = [
       {
         title: "Your Channel",
         path: "/your-channel",
-        defaultIcon: <IoMdPerson />,
-        activeIcon: <IoMdPerson />,
+        defaultIcon: <SquareUserRound />,
+        activeIcon: <SquareUserRound />,
       },
     ],
   },
