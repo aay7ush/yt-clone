@@ -70,6 +70,19 @@ export default function Sidebar({}: Props) {
               )}
           </>
         ))}
+        {isSidebarOpen && (
+          <section className="px-4 flex flex-col text-zinc-400 gap-3  w-full border-t border-zinc-600 mt-4 pt-4 text-sm font-semibold">
+            <p>About Press Copyright Contact us Creator Advertise Developers</p>
+            <p>
+              Terms Privacy Policy & Safety How YouTube works
+              <br />
+              Test new features
+            </p>
+            <p className="text-xs font-normal text-zinc-600">
+              © 2023 Google LLC
+            </p>
+          </section>
+        )}
       </main>
     </div>
   );
