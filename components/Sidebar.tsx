@@ -16,7 +16,7 @@ export default function Sidebar({}: Props) {
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
   return (
     <div className="h-full flex flex-col text-slate-50">
-      <section className="flex items-center gap-4 px-5 py-5">
+      <section className="flex items-center gap-2 px-5 py-5">
         <HoverDiv onClick={toggleSidebar} className="p-2 rounded-full">
           <AlignJustify className="text-3xl" />
         </HoverDiv>

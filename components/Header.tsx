@@ -8,27 +8,10 @@ import {
   Search,
   Video,
 } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="px-4 py-2.5 flex justify-between items-center gap-32">
-      <section className="flex items-center gap-5">
-        <button>
-          <Menu />
-        </button>
-        <Link href="/">
-          <Image
-            src="/logo.svg"
-            alt="YouTube Logo"
-            width={100}
-            height={100}
-            className="min-w-24"
-          />
-        </Link>
-      </section>
-
+    <header className="px-4 py-5 flex justify-between items-center gap-32">
       <section className="hidden md:flex flex-grow gap-3">
         <div className="flex border border-zinc-800 pl-5 rounded-full overflow-hidden w-full">
           <input

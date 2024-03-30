@@ -21,8 +21,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={cn(inter.className, "bg-black text-white")}>
-          {children}
-          <Sidebar />
+          <div style={{ display: "flex", gap: "2rem" }}>
+            <Sidebar />
+            <main style={{ flex: "1" }}>{children}</main>
+          </div>
         </body>
       </html>
     </ClerkProvider>
