@@ -20,11 +20,15 @@ export default function Sidebar({}: Props) {
         <HoverDiv onClick={toggleSidebar} className="p-2 rounded-full">
           <AlignJustify className="text-3xl" />
         </HoverDiv>
-        <Image
-          className="w-[90px] h-[20px]"
-          src={youtubeLogo}
-          alt="youtube-logo"
-        />
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="YouTube Logo"
+            width={100}
+            height={100}
+            className="min-w-24"
+          />
+        </Link>
       </section>
       <main
         className={cn("flex flex-col w-[240px] h-full", {
