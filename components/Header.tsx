@@ -1,4 +1,4 @@
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import {
   Bell,
   CircleUserRound,
@@ -7,7 +7,7 @@ import {
   Mic,
   Search,
   Video,
-} from "lucide-react";
+} from "lucide-react"
 
 export default function Header() {
   return (
@@ -58,5 +58,5 @@ export default function Header() {
         </SignedIn>
       </section>
     </header>
-  );
+  )
 }
